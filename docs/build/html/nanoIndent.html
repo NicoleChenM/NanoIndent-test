@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>nanoIndent module &mdash; nanoIndent 1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Doctest" href="doctest.html" />
+    <link rel="prev" title="nanoIndent" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> nanoIndent
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">nanoIndent</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">nanoIndent module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="doctest.html">Doctest</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">nanoIndent</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="modules.html">nanoIndent</a> &raquo;</li>
+      <li>nanoIndent module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/nanoIndent.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-nanoIndent">
+<span id="nanoindent-module"></span><h1>nanoIndent module<a class="headerlink" href="#module-nanoIndent" title="Permalink to this headline"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="nanoIndent.FileType">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nanoIndent.</span></span><span class="sig-name descname"><span class="pre">FileType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nanoIndent.FileType" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nanoIndent.FileType.Multi">
+<span class="sig-name descname"><span class="pre">Multi</span></span><em class="property"> <span class="pre">=</span> <span class="pre">2</span></em><a class="headerlink" href="#nanoIndent.FileType.Multi" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nanoIndent.FileType.Single">
+<span class="sig-name descname"><span class="pre">Single</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#nanoIndent.FileType.Single" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nanoIndent.Indentation">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nanoIndent.</span></span><span class="sig-name descname"><span class="pre">Indentation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileName</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nuMat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nanoIndent.Indentation" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nanoIndent.Indentation.OliverPharrMethod">
+<span class="sig-name descname"><span class="pre">OliverPharrMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">S</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">P</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nanoIndent.Indentation.OliverPharrMethod" title="Permalink to this definition"></a></dt>
+<dd><p>Conventional Oliver-Pharr indentation method to calculate reduced Modulus E*</p>
+<dl class="simple">
+<dt>The following equations are used in that order:&lt;br&gt;</dt><dd><p>h_c = h-beta P/S&lt;br&gt;
+A = h_c(prefactors)&lt;br&gt;
+S = 2/sqrt(pi) sqrt(A) E*&lt;br&gt;
+A the contact area, h_c the contact depth&lt;br&gt;</p>
+</dd>
+<dt>Args:</dt><dd><p>S: stiffness = slope dP/dh
+P: maximal force
+h: total penetration depth</p>
+</dd>
+<dt>Returns:</dt><dd><p>as list: reducedModulus E*, A, h_c</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nanoIndent.Indentation.ReducedModulus">
+<span class="sig-name descname"><span class="pre">ReducedModulus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">E</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nuThis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nanoIndent.Indentation.ReducedModulus" title="Permalink to this definition"></a></dt>
+<dd><p>Calculate the reduced modulus from the Youngs modulus</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>E: Youngs modulus [GPa]
+nuThis: use a non-standard Young’s modulus</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nanoIndent.Indentation.UnloadingPowerFunc">
+<span class="sig-name descname"><span class="pre">UnloadingPowerFunc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h_</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">B</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nanoIndent.Indentation.UnloadingPowerFunc" title="Permalink to this definition"></a></dt>
+<dd><p>internal function describing the unloading regime</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nanoIndent.Indentation.YoungsModulus">
+<span class="sig-name descname"><span class="pre">YoungsModulus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">redE</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nuThis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nanoIndent.Indentation.YoungsModulus" title="Permalink to this definition"></a></dt>
+<dd><p>Calculate the Youngs modulus from the reduced Youngs modulus</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>redE: reduced Youngs modulus [GPa]
+nuThis: use a non-standard Young’s modulus</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nanoIndent.Indentation.analyse">
+<span class="sig-name descname"><span class="pre">analyse</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nanoIndent.Indentation.analyse" title="Permalink to this definition"></a></dt>
+<dd><p>update slopes/stiffness, Young’s modulus and hardness after displacement correction by:
+- drift change
+- compliance change</p>
+<p>ONLY DO ONCE AFTER LOADING FILE: if this causes issues introduce flag analysed which is toggled during loading and analysing</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nanoIndent.Indentation.analysePreDrift">
+<span class="sig-name descname"><span class="pre">analysePreDrift</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nanoIndent.Indentation.analysePreDrift" title="Permalink to this definition"></a></dt>
+<dd><p>Analyse drift segment by Hysitron before the test</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>plot: plot drift data</p>
+</dd>
+<dt>Results:</dt><dd><p>drift in um/s</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nanoIndent.Indentation.calcHardness">
+<span class="sig-name descname"><span class="pre">calcHardness</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">minDepth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nanoIndent.Indentation.calcHardness" title="Permalink to this definition"></a></dt>
+<dd><p>Calculate and plot Hardness as a function of the depth</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>minDepth: minimum depth for fitting horizontal; if negative: no line is fitted
+plot: plot comparison this calculation to data read from file</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nanoIndent.Indentation.calcStiffness2Force">
+<span class="sig-name descname"><span class="pre">calcStiffness2Force</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">minDepth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calibrate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nanoIndent.Indentation.calcStiffness2Force" title="Permalink to this definition"></a></dt>
+<dd><p>Calculate and plot stiffness squared over force as a function of the depth</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>minDepth: minimum depth for fitting line
+plot: plot curve and slope
+calibrate: calibrate additional stiffness and save value</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nanoIndent.Indentation.calcYoungsModulus">
+<span class="sig-name descname"><span class="pre">calcYoungsModulus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">minDepth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">-</span> <span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nanoIndent.Indentation.calcYoungsModulus" title="Permalink to this definition"></a></dt>
+<dd><p>Calculate and plot Young’s modulus as a function of the depth
+-  use corrected h, s (do not recalculate)</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>minDepth: minimum depth for fitting horizontal; if negative: no line is fitted
+plot: plot comparison this calculation to data read from file</p>
+</dd>
+<dt>Returns:</dt><dd><p>average Youngs, minDepth&gt;0</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nanoIndent.Indentation.calibrateStiffness">
+<span class="sig-name descname"><span class="pre">calibrateStiffness</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">critDepth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">critForce</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plotStiffness</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">returnAxis</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nanoIndent.Indentation.calibrateStiffness" title="Permalink to this definition"></a></dt>
+<dd><p>Calibrate by first frame-stiffness from K^2/P of individual measurement</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>critDepth: frame stiffness: what is the minimum depth of data used
+critForce: frame stiffness: what is the minimum force used for fitting
+plotStiffness: plot stiffness graph with compliance
+returnAxis: return axis of plot</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nanoIndent.Indentation.calibration">
+<span class="sig-name descname"><span class="pre">calibration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eTarget</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">72.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numPolynomial</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">critDepth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">critForce</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plotStiffness</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plotTip</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nanoIndent.Indentation.calibration" title="Permalink to this definition"></a></dt>
+<dd><p>Calibrate by first frame-stiffness and then area-function calibration</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>eTarget: target Young’s modulus (not reduced), nu is known
+numPolynomial: number of area function polynomial; if None: return interpolation function
+critDepth: frame stiffness: what is the minimum depth of data used; area function: what is the maximum depth of data used
+(if deep data is used for area function, this data can scew the area function)
+critForce: frame stiffness: what is the minimum force used for fitting
+plotStiffness: plot stiffness graph with compliance
+pltTip: plot tip shape after fitting</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nanoIndent.Indentation.getDataframe">
+<span class="sig-name descname"><span class="pre">getDataframe</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nanoIndent.Indentation.getDataframe" title="Permalink to this definition"></a></dt>
+<dd><p>previous name: getResult
+save all results to dataframe variable for easy proccessing</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nanoIndent.Indentation.getDictionary">
+<span class="sig-name descname"><span class="pre">getDictionary</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nanoIndent.Indentation.getDictionary" title="Permalink to this definition"></a></dt>
+<dd><p>save last result to dictionary variable for easy proccessing</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nanoIndent.Indentation.identifyLoadHoldUnload">
+<span class="sig-name descname"><span class="pre">identifyLoadHoldUnload</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nanoIndent.Indentation.identifyLoadHoldUnload" title="Permalink to this definition"></a></dt>
+<dd><p>internal method: identify ALL load - hold - unload segments in data</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>plot: verify by plotting</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nanoIndent.Indentation.identifyLoadHoldUnloadCSM">
+<span class="sig-name descname"><span class="pre">identifyLoadHoldUnloadCSM</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nanoIndent.Indentation.identifyLoadHoldUnloadCSM" title="Permalink to this definition"></a></dt>
+<dd><p>internal method: identify load - hold - unload segment in CSM data</p>
+<p>Backup: if identifyLoadHoldUnload fails</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nanoIndent.Indentation.inverseOliverPharrMethod">
+<span class="sig-name descname"><span class="pre">inverseOliverPharrMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">S</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">P</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">E</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nanoIndent.Indentation.inverseOliverPharrMethod" title="Permalink to this definition"></a></dt>
+<dd><p>Inverse Oliver-Pharr indentation method to calculate contact area A</p>
+<p>equations and variable definitions given above; order in reverse order</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>S: slope dP/dh
+P: maximal force
+E: reducedModulus E*</p>
+</dd>
+<dt>Returns:</dt><dd><p>h penetration depth</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nanoIndent.Indentation.loadAgilent">
+<span class="sig-name descname"><span class="pre">loadAgilent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileName</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nanoIndent.Indentation.loadAgilent" title="Permalink to this definition"></a></dt>
+<dd><p>Initialize G200 excel file for processing</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>fileName: file name</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nanoIndent.Indentation.loadFischerScope">
+<span class="sig-name descname"><span class="pre">loadFischerScope</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileName</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nanoIndent.Indentation.loadFischerScope" title="Permalink to this definition"></a></dt>
+<dd><p>Initialize txt-file from Fischer-Scope for processing</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>fileName: file name</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nanoIndent.Indentation.loadHysitron">
+<span class="sig-name descname"><span class="pre">loadHysitron</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileName</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plotContact</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nanoIndent.Indentation.loadHysitron" title="Permalink to this definition"></a></dt>
+<dd><p>Load Hysitron hld or txt file for processing, only contains one test</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>fileName: file name
+plotContact: plot intial contact identification (use this method for access)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nanoIndent.Indentation.loadMicromaterials">
+<span class="sig-name descname"><span class="pre">loadMicromaterials</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileName</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plotContact</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nanoIndent.Indentation.loadMicromaterials" title="Permalink to this definition"></a></dt>
+<dd><p>Load Micromaterials txt file for processing, contains only one test</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>fileName: file name or file-content
+plotContact: plot intial contact identification (use this method for access)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nanoIndent.Indentation.loadMicromaterialsZip">
+<span class="sig-name descname"><span class="pre">loadMicromaterialsZip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fileName</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nanoIndent.Indentation.loadMicromaterialsZip" title="Permalink to this definition"></a></dt>
+<dd><p>Initialize zip-file file for processing</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>fileName: file name</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nanoIndent.Indentation.nextAgilentTest">
+<span class="sig-name descname"><span class="pre">nextAgilentTest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">newTest</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nanoIndent.Indentation.nextAgilentTest" title="Permalink to this definition"></a></dt>
+<dd><p>Go to next sheet in worksheet and prepare indentation data</p>
+<p>Data: _Raw: without frame stiffness correction, _Frame:  with frame stiffness correction (remove postscript finally)
+- only affects/applies directly depth (h) and stiffness (s)
+- modulus, hardness and k2p always only use the one with frame correction</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>newTest: take next sheet (default)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nanoIndent.Indentation.nextFischerScopeTest">
+<span class="sig-name descname"><span class="pre">nextFischerScopeTest</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nanoIndent.Indentation.nextFischerScopeTest" title="Permalink to this definition"></a></dt>
+<dd><p>Go to next dataframe</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nanoIndent.Indentation.nextMicromaterialsTest">
+<span class="sig-name descname"><span class="pre">nextMicromaterialsTest</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nanoIndent.Indentation.nextMicromaterialsTest" title="Permalink to this definition"></a></dt>
+<dd><p>Go to next file in zip-file</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nanoIndent.Indentation.nextTest">
+<span class="sig-name descname"><span class="pre">nextTest</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nanoIndent.Indentation.nextTest" title="Permalink to this definition"></a></dt>
+<dd><p>Wrapper for all next test for all vendors</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nanoIndent.Indentation.plot">
+<span class="sig-name descname"><span class="pre">plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">saveFig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nanoIndent.Indentation.plot" title="Permalink to this definition"></a></dt>
+<dd><p>Plot force-depth curve with all data</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>saveFig: save plot to file [use known filename plus extension png]
+show: show figure, else do not show</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nanoIndent.Indentation.plotAsDepth">
+<span class="sig-name descname"><span class="pre">plotAsDepth</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">property</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">saveFig</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hvline</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nanoIndent.Indentation.plotAsDepth" title="Permalink to this definition"></a></dt>
+<dd><p>Plot as function of depth either Young’s modulus, hardness,
+stiffnessSquaredForce, ContactDepth, Contact Area, reducedModulus</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>property: what to plot on y-axis [E,H,K,K2P,h_c,A_c,Ered]
+saveFig: save plot to file [use known filename plus extension png]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nanoIndent.Indentation.plotTestingMethod">
+<span class="sig-name descname"><span class="pre">plotTestingMethod</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nanoIndent.Indentation.plotTestingMethod" title="Permalink to this definition"></a></dt>
+<dd><p>plot testing method</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nanoIndent.Indentation.popIn">
+<span class="sig-name descname"><span class="pre">popIn</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">correctH</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">removeInitialNM</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nanoIndent.Indentation.popIn" title="Permalink to this definition"></a></dt>
+<dd><p>Search for pop-in by jump in depth rate</p>
+<p>Certainty:
+- deltaSlope: higher is better (difference in elastic - plastic slope). Great indicator
+- prefactor: higher is better (prefactor of elastic curve). Great indicator
+- secondRate: lower is better (height of second largest jump). Nice indicator 0.25*deltaRate
+- covElast: lower is better. bad indicator
+- deltaH: higher is better (delta depth in jump). bad indicator
+- deltaRate: higher is better (depth rate during jump). bad indicator</p>
+<p>Future: iterate over largest, to identify best</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>correctH: correct depth such that curves aligned
+plot: plot pop-in curve
+removeInitialNM: remove initial nm from data as they have large scatter</p>
+</dd>
+<dt>Returns:</dt><dd><p>pop-in force, dictionary of certainty</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nanoIndent.Indentation.stiffnessFromUnloading">
+<span class="sig-name descname"><span class="pre">stiffnessFromUnloading</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">P</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nanoIndent.Indentation.stiffnessFromUnloading" title="Permalink to this definition"></a></dt>
+<dd><p>Calculate single unloading stiffness from Unloading
+see G200 manual, p7-6</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>P: vector of forces
+h: vector of depth
+plot: plot results</p>
+</dd>
+<dt>Results:</dt><dd><p>stiffness, validMask [values of P,h where stiffness is determined], mask, optimalVariables, powerlawFit-success</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nanoIndent.Indentation.tareDepthForce">
+<span class="sig-name descname"><span class="pre">tareDepthForce</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">slopeThreshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compareRead</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nanoIndent.Indentation.tareDepthForce" title="Permalink to this definition"></a></dt>
+<dd><p>Calculate surface contact (by slope being larger than threshold)
+and offset depth,force,time by the surface</p>
+<p>Future improvements:
+- surface identification in future
+- handle more cases</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>slopeThreshold: threshold slope in P-h curve for contact: 200,300
+compareRead: compare new results to the ones from the file
+plot: plot comparison new data and data from file</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nanoIndent.Indentation.verifyOneData">
+<span class="sig-name descname"><span class="pre">verifyOneData</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nanoIndent.Indentation.verifyOneData" title="Permalink to this definition"></a></dt>
+<dd><p>Test one data set to ensure everything still working: OliverPharrMethod and area functions (normal and inverse)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nanoIndent.Indentation.verifyOneData1">
+<span class="sig-name descname"><span class="pre">verifyOneData1</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#nanoIndent.Indentation.verifyOneData1" title="Permalink to this definition"></a></dt>
+<dd><p>Test one data set to ensure everything still working: OliverPharrMethod and area functions (normal and inverse)</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nanoIndent.Indentation.verifyReadCalc">
+<span class="sig-name descname"><span class="pre">verifyReadCalc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nanoIndent.Indentation.verifyReadCalc" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nanoIndent.Method">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nanoIndent.</span></span><span class="sig-name descname"><span class="pre">Method</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nanoIndent.Method" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nanoIndent.Method.CSM">
+<span class="sig-name descname"><span class="pre">CSM</span></span><em class="property"> <span class="pre">=</span> <span class="pre">3</span></em><a class="headerlink" href="#nanoIndent.Method.CSM" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nanoIndent.Method.ISO">
+<span class="sig-name descname"><span class="pre">ISO</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#nanoIndent.Method.ISO" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nanoIndent.Method.MULTI">
+<span class="sig-name descname"><span class="pre">MULTI</span></span><em class="property"> <span class="pre">=</span> <span class="pre">2</span></em><a class="headerlink" href="#nanoIndent.Method.MULTI" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nanoIndent.Tip">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nanoIndent.</span></span><span class="sig-name descname"><span class="pre">Tip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shape</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'perfect'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interpFunction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compliance</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nanoIndent.Tip" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nanoIndent.Tip.areaFunction">
+<span class="sig-name descname"><span class="pre">areaFunction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nanoIndent.Tip.areaFunction" title="Permalink to this definition"></a></dt>
+<dd><blockquote>
+<div><p>AREA FUNCTION: from contact depth h_c calculate area</p>
+<p>all functions inside are using [nm]; the outside of this function uses [um]; hence at the start and end there is conversion</p>
+<p>prefactors:
+- “iso” type area function A=ax^2+bx^1+cx^0.5…, requires !!nm!! units
+- “perfect” type area function of a perfect Berkovich A=3*sqrt(3)*tan(65.27)^2 h_c^2 = 24.494 h_c^2
+- “sphere” type: A=pi(2Rh-h^2) h=depth, R indenter radius; for small h-&gt; h^2=0&lt;br&gt;
+prefactors [-pi, 2piR] R in nm&lt;br&gt; does not account for cone at top; hence here other approach&lt;br&gt;</p>
+</div></blockquote>
+<dl>
+<dt>Args:</dt><dd><blockquote>
+<div><p>h [array]: contact depth in um</p>
+</div></blockquote>
+<dl class="simple">
+<dt>Returns:</dt><dd><p>area projected contact area in [um2]</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nanoIndent.Tip.areaFunctionInverse">
+<span class="sig-name descname"><span class="pre">areaFunctionInverse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">area</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h_c0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">70</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nanoIndent.Tip.areaFunctionInverse" title="Permalink to this definition"></a></dt>
+<dd><p>INVERSE AREA FUNCTION: from area calculate contact depth h_c</p>
+<p>using Newton iteration with initial guess contact depth h_c0&lt;br&gt;</p>
+<p>prefactors:
+-  “iso” type area function A=ax^2+bx^1+cx^0.5…, requires !!nm!! units
+-  “perfect” type area function of a perfect Berkovich A=3*sqrt(3)*tan(65.27)^2 h_c^2 = 24.494 h_c^2</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>area: projected contact area
+h_c0: initial guess contact depth</p>
+</dd>
+<dt>Returns:</dt><dd><p>h depth</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nanoIndent.Tip.plotIndenterShape">
+<span class="sig-name descname"><span class="pre">plotIndenterShape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">maxDepth</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">steps</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">show</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tipLabel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fileName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nanoIndent.Tip.plotIndenterShape" title="Permalink to this definition"></a></dt>
+<dd><p>check indenter shape: plot shape function against perfect Berkovich</p>
+<p>analytical: perfect shape is 2.792254*x</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>maxDepth: maximum depth [um] to plot; default=10um
+steps: number of steps for plotting
+show: show figure
+tipLabel: label for this tip
+fileName: if given, save to file</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nanoIndent.Tip.setInterpolationFunction">
+<span class="sig-name descname"><span class="pre">setInterpolationFunction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">interpFunction</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nanoIndent.Tip.setInterpolationFunction" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="nanoIndent.Vendor">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">nanoIndent.</span></span><span class="sig-name descname"><span class="pre">Vendor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#nanoIndent.Vendor" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nanoIndent.Vendor.Agilent">
+<span class="sig-name descname"><span class="pre">Agilent</span></span><em class="property"> <span class="pre">=</span> <span class="pre">1</span></em><a class="headerlink" href="#nanoIndent.Vendor.Agilent" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nanoIndent.Vendor.FischerScope">
+<span class="sig-name descname"><span class="pre">FischerScope</span></span><em class="property"> <span class="pre">=</span> <span class="pre">5</span></em><a class="headerlink" href="#nanoIndent.Vendor.FischerScope" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nanoIndent.Vendor.HysiHLD">
+<span class="sig-name descname"><span class="pre">HysiHLD</span></span><em class="property"> <span class="pre">=</span> <span class="pre">2</span></em><a class="headerlink" href="#nanoIndent.Vendor.HysiHLD" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nanoIndent.Vendor.HysiTXT">
+<span class="sig-name descname"><span class="pre">HysiTXT</span></span><em class="property"> <span class="pre">=</span> <span class="pre">3</span></em><a class="headerlink" href="#nanoIndent.Vendor.HysiTXT" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="nanoIndent.Vendor.Micromaterials">
+<span class="sig-name descname"><span class="pre">Micromaterials</span></span><em class="property"> <span class="pre">=</span> <span class="pre">4</span></em><a class="headerlink" href="#nanoIndent.Vendor.Micromaterials" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="nanoIndent" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="doctest.html" class="btn btn-neutral float-right" title="Doctest" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, RC.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

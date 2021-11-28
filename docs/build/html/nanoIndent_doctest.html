@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>nanoIndent_doctest &mdash; nanoIndent 1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> nanoIndent
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">nanoIndent</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">nanoIndent</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>nanoIndent_doctest</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/nanoIndent_doctest.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="nanoindent-doctest">
+<h1>nanoIndent_doctest<a class="headerlink" href="#nanoindent-doctest" title="Permalink to this headline"></a></h1>
+<span class="target" id="module-nanoIndent_doctest"></span><section id="doctest">
+<h2>Doctest<a class="headerlink" href="#doctest" title="Permalink to this headline"></a></h2>
+<p>Example for Aglient G200 file and ISO indentation test method:</p>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">nanoIndent</span> <span class="kn">import</span> <span class="n">Tip</span><span class="p">,</span> <span class="n">Indentation</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">i</span> <span class="o">=</span> <span class="n">Indentation</span><span class="p">(</span><span class="s2">&quot;.../ExperimentalMicromechanics-master/Examples/Agilent/CSM.xls&quot;</span><span class="p">)</span>
+<span class="go">=============  .../ExperimentalMicromechanics-master/Examples/Agilent/CSM.xls  ============</span>
+<span class="go">Displacement Into Surface      : h                    </span>
+<span class="go">Load On Sample                 : p                    </span>
+<span class="go">Time On Sample                 : t                    </span>
+<span class="go">Harmonic Contact Stiffness     : slope                </span>
+<span class="go">Hardness                       : hardness             </span>
+<span class="go">Modulus                        : modulus              </span>
+<span class="go">Contact Area                   : A_c                  </span>
+<span class="go">Contact Depth                  : h_c                  </span>
+<span class="go">*** CSM Status                     NOT USED</span>
+<span class="go">Harmonic Displacement          : hHarmonic            </span>
+<span class="go">*** Harmonic Frequency             NOT USED</span>
+<span class="go">Harmonic Load                  : pHarmonic            </span>
+<span class="go">Harmonic Stiffness             : slopeInvalid         </span>
+<span class="go">Load vs Disp Slope             : pVsHSlope            </span>
+<span class="go">Phase Angle                    : phaseAngle           </span>
+<span class="go">Raw Displacement               : hRaw                 </span>
+<span class="go">Raw Load                       : pRaw                 </span>
+<span class="go">Reduced Modulus                : modulusRed           </span>
+<span class="go">Stiffness Squared Over Load    : k2p                  </span>
+<span class="go">Support Spring Stiffness       : slopeSupport         </span>
+<span class="go">Time                           : tTotal               </span>
+<span class="go">X Position                     : xCoarse              </span>
+<span class="go">Y Position                     : yCoarse              </span>
+<span class="go">*WARNING* identifyLoadHoldUnload: cut two from end of unloadIdx: UNDESIRED</span>
+<span class="go">Number Unloading segments 1</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">i</span><span class="o">.</span><span class="n">nuMat</span> <span class="o">=</span> <span class="mf">0.2</span> <span class="c1"># nuMat is the Poisson‘s ratio of material</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">i</span><span class="o">.</span><span class="n">plotTestingMethod</span><span class="p">()</span> <span class="c1"># Plot testing method</span>
+</pre></div>
+</div>
+<figure class="align-center" id="id1">
+<span id="test-method"></span><a class="reference internal image-reference" href="_images/test_method.png"><img alt="Alternative text" src="_images/test_method.png" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-text">Test method</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+<span class="go">Stiffness:232.4mN/um   hMax:0.4013um    pMax:20.09mN</span>
+<span class="go">E*:       120.6GPa     A:   2.9157um2    hc: 0.3365um</span>
+<span class="go">E:        129.4GPa     H:   6.9GPa</span>
+<span class="go">Number of unloading segments:1  Method:Method.ISO</span>
+<span class="go">&lt;AxesSubplot:xlabel=&#39;depth [$\mu m$]&#39;, ylabel=&#39;force [$mN$]&#39;&gt;</span>
+</pre></div>
+</div>
+<figure class="align-center" id="id2">
+<span id="indentation-curve"></span><a class="reference internal image-reference" href="_images/indentation_curve.png"><img alt="Alternative text" src="_images/indentation_curve.png" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-text">Indentation curve</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<div class="highlight-pycon3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i</span><span class="o">.</span><span class="n">verifyReadCalc</span><span class="p">()</span> <span class="c1"># Error calculation</span>
+<span class="go">Error in hc: 0.000e+00 % between 3.365e-01 and 3.365e-01</span>
+<span class="go">Error in Ac: 9.976e-04 % between 2.916e+00 and 2.916e+00</span>
+<span class="go">Error in E*: 4.988e-04 % between 1.206e+02 and 1.206e+02</span>
+<span class="go">Error in E:  1.087e-02 % between 1.294e+02 and 1.294e+02</span>
+<span class="go">Error in H:  9.976e-04 % between 6.890e+00 and 6.890e+00</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="n">S</span> <span class="o">=</span> <span class="n">i</span><span class="o">.</span><span class="n">stiffnessFromUnloading</span><span class="p">(</span><span class="n">i</span><span class="o">.</span><span class="n">p</span><span class="p">,</span> <span class="n">i</span><span class="o">.</span><span class="n">h</span><span class="p">,</span> <span class="n">plot</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span> <span class="c1"># Calculate single stiffness according to unloading data</span>
+<span class="go">Number of unloading segments:1  Method:Method.ISO</span>
+
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error in stiffness: </span><span class="si">%.2e</span><span class="s2">&quot;</span><span class="o">%</span><span class="p">((</span><span class="n">i</span><span class="o">.</span><span class="n">slope</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">S</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">/</span><span class="n">S</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span> 
+<span class="go">Error: -3.23e-04</span>
+</pre></div>
+</div>
+<p>Attention: error &lt;&lt; 1% means it is small compared to the values itself</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, RC.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
