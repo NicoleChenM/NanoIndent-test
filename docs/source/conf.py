@@ -42,17 +42,22 @@ release = '1.0'
 extensions = ['sphinx.ext.autodoc',
               'sphinx.ext.doctest']
 
-
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
+templates_path = ["_templates"]
 
-source_suffix = '.rst'
-
-master_doc = 'index'
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = []
+
+# The name of the Pygments (syntax highlighting) style to use.
+pygments_style = "sphinx"
+
+# source_suffix = ['.rst', '.md']
+source_suffix = ".rst"
+
+# The master toctree document.
+master_doc = "index"
 
 
 # -- Options for HTML output -------------------------------------------------
