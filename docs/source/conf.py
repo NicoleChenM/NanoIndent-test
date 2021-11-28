@@ -18,9 +18,7 @@ sys.path.insert(0, os.path.abspath('../../nanoIndent'))
 
 import mock
 
-MOCK_MODULES = ['numpy', 'math', 'io', 'lmfit', 're', 'os', 'traceback', 'pandas', 'zipfile',
-                'scipy', 'sklearn', 'matplotlib', 'matplotlib.pyplot', 'enum', 'scipy.optimize',
-                'scipy.interpolate', 'scipy.signal', 'scipy.special', '__future__', 'toolboxutilities']
+MOCK_MODULES = ['numpy', 'math', 'io', 'lmfit', 're', 'os', 'traceback', 'pandas', 'zipfile', 'scipy', 'sklearn', 'matplotlib', 'matplotlib.pyplot', 'enum', 'scipy.optimize', 'scipy.interpolate', 'scipy.signal', 'scipy.special', '__future__', 'toolboxutilities']
 for mod_name in MOCK_MODULES:
     sys.modules[mod_name] = mock.Mock()
 
